@@ -1,0 +1,30 @@
+
+
+
+<!-- app/views/articles/new.html.erb -->
+<h1>Submit Your Article</h1>
+
+<%= form_with url: articles_path, method: :post do %>
+  <div>
+    <%= label_tag :title, "Title" %>
+    <%= text_field_tag :title %>
+  </div>
+  <div>
+    <%= label_tag :content, "Content" %>
+    <%= text_area_tag :content %>
+  </div>
+  <div>
+    <%= submit_tag "Submit" %>
+  </div>
+<% end %>
+
+<%= flash[:notice] %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    <% if flash[:notice] %>
+      alert("<%= j flash[:notice] %>");
+    <% end %>
+  });
+</script>
+

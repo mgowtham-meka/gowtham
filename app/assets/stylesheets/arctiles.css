@@ -1,0 +1,14 @@
+/* app/assets/stylesheets/articles.css */
+body {
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #444;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
